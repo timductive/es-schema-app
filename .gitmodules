@@ -1,0 +1,3 @@
+[submodule "es-schema"]
+	path = es-schema
+	url = git@github.com:timductive/es-schema.git
