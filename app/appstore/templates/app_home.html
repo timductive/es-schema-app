@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ app | title }}</h1>
+    {% if app == 'stock ticker' %}
+    <p><a href="https://tim-test.kb.us-west1.gcp.cloud.es.io:9243/app/dashboards#/view/0ad3b580-7d5d-11ec-86b3-0734a3198805?_g=(filters:!(),query:(language:kuery,query:''),refreshInterval:(pause:!t,value:0),time:(from:now-90d%2Fd,to:now))">View in Kibana</a> | <a href="/apps/edit/{{ category }}/{{ app }}">Edit</a></p>
+    
+    <iframe src="https://tim-test.kb.us-west1.gcp.cloud.es.io:9243/app/dashboards?auth_provider_hint=anonymous1#/view/0ad3b580-7d5d-11ec-86b3-0734a3198805?embed=true&_g=(filters%3A!()%2Cquery%3A(language%3Akuery%2Cquery%3A'')%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-90d%2Fd%2Cto%3Anow))&hide-filter-bar=true" height="900" width="1200"></iframe>
+    {% endif %}
+</div>
+
+
+{% endblock %}

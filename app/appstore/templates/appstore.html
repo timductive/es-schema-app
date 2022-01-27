@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome, Install an Elastic App!</h1>
+<ul>
+    {% for key, category in apps.items %}
+    <li>{{ key | title }}</li>
+    <ul>
+        {% for app in category %}
+        <li>
+            {{ app | title }} - <a href="/apps/install/{{ key }}/{{ app }}">Install</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</ul>
+{% endblock %}
