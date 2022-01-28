@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Installed Apps</h1>
-
 <div class="container">
+    <h1>Installed Apps</h1>
+
     {% for app in installed_apps %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -11,7 +11,7 @@
           <p class="card-text"></p>
           <a href="/apps/home/{{ app.category }}/{{ app.app_name }}" class="btn btn-primary">View</a>
         </div>
-      </div>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}

@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome, Install an Elastic App!</h1>
-<ul>
+<div class="container">
+    <h1>Welcome, Install an Elastic App!</h1>
+
     {% for key, category in apps.items %}
-    <li>{{ key | title }}</li>
-    <ul>
+    <h3>{{ key | title }}</h3>
+    <div class="row">
         {% for app in category %}
-        <li>
-            {{ app | title }} - <a href="/apps/install/{{ key }}/{{ app }}">Install</a>
-        </li>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ app | title }}</h5>
+                  <p class="card-text"></p>
+                  <a href="/apps/install/{{ key }}/{{ app }}" class="btn btn-primary">Install</a>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
     {% endfor %}
-</ul>
+</div>
 {% endblock %}

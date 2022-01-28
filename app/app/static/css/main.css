@@ -3,18 +3,22 @@ body {
     min-height: -webkit-fill-available;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
-main {
+.main-nav {
   display: flex;
-  flex-wrap: nowrap;
   height: -webkit-fill-available;
   height: 100vh;
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
+  position: relative;
+}
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  height: 100vh;
+  overflow-y: scroll;
+  width: calc(100% - 200px);
 }
 
 .b-example-divider {
